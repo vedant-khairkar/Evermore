@@ -13,7 +13,7 @@ import {
   "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
 
 import {
-  getFirestore,
+  initializeFirestore,
   doc,
   getDoc,
   runTransaction,
@@ -35,7 +35,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getFirestore(app);
+
+// Initialize Firestore with long-polling transport
+const db = initializeFirestore(app, {
+  experimentalForceLongPolling: true
+});
 
 const $ = (id) => document.getElementById(id);
 
