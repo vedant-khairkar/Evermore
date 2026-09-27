@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evermore | Profile & Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="dashboard">
+
+    <aside class="dashboard-sidebar">
+
+        <a href="home.html" class="brand">
+            <span class="logo">∞</span>
+            <h2>Evermore</h2>
+        </a>
+
+        <nav class="sidebar-nav">
+            <a href="home.html" class="nav-link">🏠 Home</a>
+            <a href="chats.html" class="nav-link">💬 Chats</a>
+            <a href="groups.html" class="nav-link">👥 Groups</a>
+            <a href="profile.html" class="nav-link active">
+                ⚙️ Profile & Settings
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" class="nav-link">↪ Log Out</a>
+        </div>
+
+    </aside>
+
+    <section class="dashboard-content">
+
+        <header class="dashboard-header">
+            <div>
+                <p class="eyebrow">MAKE IT YOURS</p>
+                <h1>Profile & Settings</h1>
+                <p class="muted">
+                    Manage your Evermore experience.
+                </p>
+            </div>
+        </header>
+
+        <!-- Profile Card -->
+        <section class="settings-section">
+
+            <h2>Your Profile</h2>
+
+            <div class="settings-card">
+
+                <div class="profile-avatar-large" id="profile-avatar">
+                    U
+                </div>
+
+                <div class="profile-details">
+                    <h3 id="profile-name">Your Username</h3>
+                    <p class="muted">
+                        Evermore member
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Appearance -->
+        <section class="settings-section">
+
+            <h2>Appearance</h2>
+
+            <div class="settings-card settings-row">
+
+                <div>
+                    <h3>Dark Mode</h3>
+                    <p class="muted">
+                        Switch between dark and light themes.
+                    </p>
+                </div>
+
+                <label class="toggle">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+
+            </div>
+
+        </section>
+
+        <!-- Account -->
+        <section class="settings-section">
+
+            <h2>Account</h2>
+
+            <div class="settings-card settings-row">
+
+                <div>
+                    <h3>Sign Out</h3>
+                    <p class="muted">
+                        End your current session.
+                    </p>
+                </div>
+
+                <button id="logout-btn" class="secondary-btn">
+                    Log Out
+                </button>
+
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            Evermore © 2026 · Every conversation has a place.
+        </footer>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+<script type="module" src="firebase.js"></script>
+
+</body>
+</html>

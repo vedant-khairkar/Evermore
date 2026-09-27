@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evermore | Chats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="dashboard">
+
+    <aside class="dashboard-sidebar">
+        <a href="home.html" class="brand">
+            <span class="logo">∞</span>
+            <h2>Evermore</h2>
+        </a>
+
+        <nav class="sidebar-nav">
+            <a href="home.html" class="nav-link">🏠 Home</a>
+            <a href="chats.html" class="nav-link active">💬 Chats</a>
+            <a href="groups.html" class="nav-link">👥 Groups</a>
+            <a href="profile.html" class="nav-link">⚙️ Profile & Settings</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" class="nav-link">↪ Log Out</a>
+        </div>
+    </aside>
+
+    <section class="dashboard-content chats-page">
+
+        <header class="dashboard-header">
+            <div>
+                <p class="eyebrow">YOUR CONVERSATIONS</p>
+                <h1>Messages</h1>
+                <p class="muted">A space for meaningful conversations.</p>
+            </div>
+
+            <button id="new-chat-btn" class="primary-btn">
+                + New Chat
+            </button>
+        </header>
+
+        <section class="chat-layout">
+
+            <!-- Conversation List -->
+            <aside class="chat-list-panel">
+
+                <div class="search-box">
+                    <input
+                        type="search"
+                        id="contact-search"
+                        placeholder="Search conversations..."
+                    >
+                </div>
+
+                <div id="contact-list" class="contact-list">
+                    <div class="empty-state">
+                        <p>No conversations yet.</p>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- Active Conversation -->
+            <section class="chat-window">
+
+                <header class="chat-header">
+                    <div class="avatar" id="chat-avatar">∞</div>
+
+                    <div class="chat-user-info">
+                        <h3 id="chat-name">Select a conversation</h3>
+                        <p id="chat-status">
+                            Your conversations will appear here.
+                        </p>
+                    </div>
+
+                    <button id="chat-options" class="icon-btn"
+                            aria-label="Conversation options">⋯</button>
+                </header>
+
+                <div id="messages" class="messages">
+                    <div class="welcome-message">
+                        <div class="welcome-icon">∞</div>
+                        <h2>Your conversations start here.</h2>
+                        <p>
+                            Choose a conversation or start a new one.
+                        </p>
+                    </div>
+                </div>
+
+                <form id="message-form" class="message-composer">
+
+                    <button type="button" id="emoji-btn"
+                            class="icon-btn">☺</button>
+
+                    <input
+                        type="text"
+                        id="message-input"
+                        placeholder="Write a message..."
+                        autocomplete="off"
+                        disabled
+                        required
+                    >
+
+                    <button type="submit" id="send-btn" disabled>
+                        Send ↑
+                    </button>
+
+                </form>
+
+            </section>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            Evermore © 2026
+        </footer>
+
+    </section>
+
+</main>
+
+<!-- New Conversation Dialog -->
+<dialog id="new-chat-dialog" class="app-dialog">
+    <form id="new-chat-form">
+        <h2>Start a conversation</h2>
+        <p>Enter the username of someone who has agreed to connect.</p>
+
+        <label for="new-chat-username">Username</label>
+
+<input
+    id="new-chat-username"
+    placeholder="Enter exact username"
+    autocomplete="off"
+    required
+    minlength="3"
+    maxlength="20"
+>
+
+<div
+    id="new-chat-result"
+    role="status"
+    aria-live="polite"
+    style="margin-top: 16px;"
+></div>
+
+        <div class="dialog-actions">
+            <button type="button" id="cancel-chat"
+                    class="secondary-btn">Cancel</button>
+            <button type="submit" class="primary-btn">Continue</button>
+        </div>
+    </form>
+</dialog>
+
+<script src="script.js"></script>
+<script type="module" src="firebase.js"></script>
+
+</body>
+</html>

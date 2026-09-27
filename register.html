@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evermore | Create Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+        <section class="auth-card">
+
+            <a href="index.html" class="brand">
+                <span class="logo">∞</span>
+                <h2>Evermore</h2>
+            </a>
+
+            <p class="auth-subtitle">
+                Every conversation has a place.
+            </p>
+
+            <h1>Create your account</h1>
+            <p class="muted">
+                Join Evermore and connect with people.
+            </p>
+
+            <form id="register-form">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Choose a username"
+                        minlength="3"
+                        maxlength="20"
+                        pattern="[A-Za-z0-9_]+"
+                        autocomplete="username"
+                        required
+                    >
+                    <small>
+                        3–20 characters. Letters, numbers, and underscores only.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">
+                        Confirm password
+                    </label>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm-password"
+                        placeholder="Re-enter your password"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                    >
+                </div>
+
+                <p id="register-message"
+                   class="form-message"
+                   role="status"
+                   aria-live="polite"></p>
+
+                <button
+                    type="submit"
+                    id="register-btn"
+                    class="primary-btn"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+            <p class="auth-footer">
+                Already have an account?
+                <a href="index.html">Sign in</a>
+            </p>
+
+        </section>
+    </main>
+
+    <script type="module" src="firebase.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evermore | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="dashboard">
+
+        <aside class="dashboard-sidebar">
+
+            <a href="home.html" class="brand">
+                <span class="logo">∞</span>
+                <h2>Evermore</h2>
+            </a>
+
+            <nav class="sidebar-nav">
+                <a href="home.html" class="nav-link active">
+                    🏠 Home
+                </a>
+
+                <a href="chats.html" class="nav-link">
+                    💬 Chats
+                </a>
+
+                <a href="groups.html" class="nav-link">
+                    👥 Groups
+                </a>
+
+                <a href="profile.html" class="nav-link">
+                    ⚙️ Profile & Settings
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="nav-link">
+                    ↪ Log Out
+                </a>
+            </div>
+
+        </aside>
+
+        <section class="dashboard-content">
+
+            <header class="dashboard-header">
+                <div>
+                    <p class="eyebrow">YOUR PERSONAL SPACE</p>
+                    <h1>Welcome to Evermore</h1>
+                    <p class="muted">
+                        Every conversation has a place.
+                    </p>
+                </div>
+
+                <div class="header-avatar" id="home-avatar">
+                    U
+                </div>
+            </header>
+
+            <section class="welcome-banner">
+                <div>
+                    <p class="eyebrow">A NEW DAY, A NEW CONVERSATION</p>
+                    <h2>Make room for meaningful connections.</h2>
+                    <p>
+                        Connect with people who choose to
+                        be part of your conversations.
+                    </p>
+
+                    <a href="chats.html" class="primary-btn">
+                        Open Messages →
+                    </a>
+                </div>
+
+                <div class="banner-symbol">∞</div>
+            </section>
+
+            <section class="dashboard-grid">
+
+                <a href="chats.html" class="dashboard-card">
+                    <div class="card-icon">💬</div>
+                    <h3>Private Chats</h3>
+                    <p>
+                        Start and manage your one-to-one
+                        conversations.
+                    </p>
+                    <span>Open Chats →</span>
+                </a>
+
+                <a href="groups.html" class="dashboard-card">
+                    <div class="card-icon">👥</div>
+                    <h3>Group Conversations</h3>
+                    <p>
+                        Create groups and bring conversations
+                        together.
+                    </p>
+                    <span>Explore Groups →</span>
+                </a>
+
+                <a href="profile.html" class="dashboard-card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Your Profile</h3>
+                    <p>
+                        Manage your profile and
+                        personalization settings.
+                    </p>
+                    <span>View Settings →</span>
+                </a>
+
+            </section>
+
+            <section class="recent-section">
+                <div class="section-title">
+                    <h2>Recent Conversations</h2>
+                    <a href="chats.html">View all →</a>
+                </div>
+
+                <div id="recent-conversations"
+                     class="recent-conversations">
+
+                    <div class="empty-state">
+                        <div class="empty-icon">✉</div>
+                        <h3>Your conversations start here.</h3>
+                        <p>
+                            Open Chats to begin a conversation
+                            with someone who has agreed to connect.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer class="dashboard-footer">
+                Evermore © 2026 · Every conversation has a place.
+            </footer>
+
+        </section>
+
+    </main>
+
+    
+<script src="script.js"></script>
+<script type="module" src="firebase.js"></script>
+
+</body>
+</html>

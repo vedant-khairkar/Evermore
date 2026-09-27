@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evermore | Groups</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="dashboard">
+
+    <aside class="dashboard-sidebar">
+
+        <a href="home.html" class="brand">
+            <span class="logo">∞</span>
+            <h2>Evermore</h2>
+        </a>
+
+        <nav class="sidebar-nav">
+            <a href="home.html" class="nav-link">🏠 Home</a>
+            <a href="chats.html" class="nav-link">💬 Chats</a>
+            <a href="groups.html" class="nav-link active">👥 Groups</a>
+            <a href="profile.html" class="nav-link">⚙️ Profile & Settings</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" class="nav-link">↪ Log Out</a>
+        </div>
+
+    </aside>
+
+    <section class="dashboard-content">
+
+        <header class="dashboard-header">
+            <div>
+                <p class="eyebrow">CONVERSATIONS TOGETHER</p>
+                <h1>Groups</h1>
+                <p class="muted">
+                    Bring your conversations together.
+                </p>
+            </div>
+
+            <button id="new-group-btn" class="primary-btn">
+                + Create Group
+            </button>
+        </header>
+
+        <section class="groups-section">
+
+            <div class="section-title">
+                <h2>Your Groups</h2>
+                <span id="group-count" class="badge">0 groups</span>
+            </div>
+
+            <div id="group-list" class="groups-grid">
+
+                <div class="empty-state">
+                    <div class="empty-icon">👥</div>
+                    <h3>No groups yet</h3>
+                    <p>
+                        Create a group with people who
+                        have agreed to participate.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            Evermore © 2026
+        </footer>
+
+    </section>
+
+</main>
+
+<!-- Create Group Dialog -->
+<dialog id="new-group-dialog" class="app-dialog">
+
+    <form id="new-group-form">
+
+        <h2>Create a group</h2>
+
+        <p>
+            Give your group a name and add participating members.
+        </p>
+
+        <div class="form-group">
+            <label for="group-name">Group name</label>
+
+            <input
+                id="group-name"
+                type="text"
+                placeholder="Enter group name"
+                maxlength="50"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="group-members">
+                Member usernames
+            </label>
+
+            <input
+                id="group-members"
+                type="text"
+                placeholder="alex, sam, jordan"
+            >
+
+            <small>
+                Enter usernames separated by commas.
+            </small>
+        </div>
+
+        <div class="dialog-actions">
+            <button
+                type="button"
+                id="cancel-group"
+                class="secondary-btn"
+            >
+                Cancel
+            </button>
+
+            <button type="submit" class="primary-btn">
+                Create Group
+            </button>
+        </div>
+
+    </form>
+
+</dialog>
+
+<script src="script.js"></script>
+<script type="module" src="firebase.js"></script>=
+
+</body>
+</html>
